@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>伊勢志摩旅行しおり</title>
+<meta name="description" content="父の退職祝い 伊勢志摩 1泊2日の家族旅行しおり">
+<style>
+  :root {
+    --bg: #f7f4ee;
+    --card: #ffffff;
+    --ink: #1f2a33;
+    --muted: #5f6b75;
+    --line: #e3ddd2;
+    --sea: #1f6f8b;
+    --sea-soft: #e4f0f4;
+    --sun: #c8862b;
+    --sun-soft: #fbf0df;
+    --rain: #4b6584;
+    --rain-soft: #e8edf3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12171b;
+      --card: #1b2227;
+      --ink: #e8ecef;
+      --muted: #9aa6b0;
+      --line: #2c353c;
+      --sea: #6cb8d2;
+      --sea-soft: #1d3039;
+      --sun: #e3a95a;
+      --sun-soft: #33281a;
+      --rain: #9fb4cf;
+      --rain-soft: #222c38;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", system-ui, sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  header {
+    background: linear-gradient(160deg, var(--sea) 0%, #164e63 100%);
+    color: #fff;
+    padding: 40px 16px 32px;
+    text-align: center;
+  }
+  header .eyebrow { font-size: 13px; letter-spacing: .15em; opacity: .85; margin: 0; }
+  header h1 { margin: 6px 0 8px; font-size: 26px; line-height: 1.4; }
+  header p { margin: 0; opacity: .9; font-size: 14px; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+    display: flex; gap: 4px; overflow-x: auto;
+    padding: 8px 12px;
+  }
+  nav a {
+    flex: none;
+    text-decoration: none; color: var(--ink);
+    font-size: 14px; padding: 6px 12px; border-radius: 999px;
+    background: var(--bg);
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 16px 16px 48px; }
+  section { margin-top: 28px; scroll-margin-top: 64px; }
+  h2 {
+    font-size: 20px; margin: 0 0 12px;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 999px;
+  }
+  .tag.sun { background: var(--sun-soft); color: var(--sun); }
+  .tag.rain { background: var(--rain-soft); color: var(--rain); }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 16px;
+  }
+  .lead { color: var(--muted); margin: 0 0 12px; font-size: 15px; }
+  dl.facts { display: grid; grid-template-columns: 6em 1fr; gap: 6px 12px; margin: 0; }
+  dl.facts dt { color: var(--muted); font-size: 14px; }
+  dl.facts dd { margin: 0; }
+  ol.timeline { list-style: none; margin: 0; padding: 0; }
+  ol.timeline li {
+    display: grid; grid-template-columns: 56px 1fr; gap: 12px;
+    padding: 12px 0; border-top: 1px solid var(--line);
+  }
+  ol.timeline li:first-child { border-top: 0; padding-top: 0; }
+  .time { font-weight: 700; color: var(--sea); font-variant-numeric: tabular-nums; }
+  .what { font-weight: 600; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .what a { color: inherit; text-decoration-color: var(--sea); text-underline-offset: 3px; }
+  .plan + .plan { margin-top: 14px; }
+  .plan h3 { margin: 0 0 4px; font-size: 17px; }
+  .callout {
+    margin-top: 12px; padding: 10px 12px; border-radius: 10px;
+    background: var(--rain-soft); font-size: 14px;
+  }
+  ul.check { list-style: none; padding: 0; margin: 0; }
+  ul.check li { padding: 8px 0 8px 28px; position: relative; border-top: 1px solid var(--line); }
+  ul.check li:first-child { border-top: 0; }
+  ul.check li::before {
+    content: ""; position: absolute; left: 2px; top: 13px;
+    width: 14px; height: 14px; border: 2px solid var(--sea); border-radius: 4px;
+  }
+  footer { color: var(--muted); font-size: 13px; }
+  footer ul { padding-left: 18px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">父の退職祝い</p>
+  <h1>伊勢志摩 家族旅行しおり</h1>
+  <p>1泊2日 ／ 1日目 13:00 合流 → 2日目 15:00 解散</p>
+</header>
+
+<nav>
+  <a href="#overview">概要</a>
+  <a href="#day1">1日目</a>
+  <a href="#day1-rain">1日目（雨）</a>
+  <a href="#day2">2日目</a>
+  <a href="#prep">準備</a>
+</nav>
+
+<main>
+
+  <section id="overview">
+    <h2>旅行の概要</h2>
+    <div class="card">
+      <dl class="facts">
+        <dt>宿</dt>
+        <dd><a href="https://www.kankomie.or.jp/spot/14616">里創人倶楽部 伊勢志摩</a><br><span class="note">志摩市磯部町的矢314 ／ 0599-57-2130</span></dd>
+        <dt>チェックイン</dt>
+        <dd>15:00〜（今回は17:00頃の予定）</dd>
+        <dt>チェックアウト</dt>
+        <dd>10:00</dd>
+        <dt>夕食</dt>
+        <dd>18:00 ホテルで（ドリンクはオールインクルーシブ）</dd>
+        <dt>移動</dt>
+        <dd>滋賀から車：父・母・妹夫婦・弟<br>横浜から車：私</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="day1">
+    <h2>1日目 <span class="tag sun">晴れの場合</span></h2>
+    <p class="lead">英虞湾を海（クルーズ）と高台（展望台）の両方から見て、パークゴルフで締める。</p>
+    <div class="card">
+      <ol class="timeline">
+        <li><span class="time">13:00</span><div><div class="what">賢島付近で合流・昼食</div></div></li>
+        <li><span class="time">13:30</span><div>
+          <div class="what"><a href="https://www.kankomie.or.jp/report/detail_610.html">英虞湾クルーズ（賢島エスパーニャクルーズ）</a></div>
+          <div class="note">約50分 ／ 大人1,900円 ／ 予約不要。天候で運休あり</div>
+        </div></li>
+        <li><span class="time">14:30</span><div>
+          <div class="what"><a href="https://www.kankomie.or.jp/spot/2307">横山展望台</a></div>
+          <div class="note">賢島から車で15分ほど。展望台に一番近い駐車場は28台</div>
+        </div></li>
+        <li><span class="time">15:30</span><div>
+          <div class="what"><a href="https://www.navitime.co.jp/category/0102001/24215/">志摩パークゴルフ場</a></div>
+          <div class="note">18ホールで1時間ほど ／ 大人800円・レンタル200円 ／ 最終受付16:00</div>
+        </div></li>
+        <li><span class="time">17:00</span><div><div class="what">ホテルにチェックイン</div></div></li>
+        <li><span class="time">18:00</span><div><div class="what">ホテルで夕食</div></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="day1-rain">
+    <h2>1日目 <span class="tag rain">雨の場合</span></h2>
+    <p class="lead">集合場所を鳥羽に変えて、屋内で楽しむ。2日目は雨でも予定どおり。</p>
+
+    <div class="card plan">
+      <h3>プランA：鳥羽水族館（おすすめ）</h3>
+      <p class="note">予約不要なので当日の天気で切り替えられる。</p>
+      <ol class="timeline">
+        <li><span class="time">12:30</span><div><div class="what">鳥羽駅周辺で合流・昼食</div></div></li>
+        <li><span class="time">13:15</span><div>
+          <div class="what"><a href="https://www.kankomie.or.jp/report/213">鳥羽水族館</a></div>
+          <div class="note">約1200種・日本で唯一ジュゴンに会える ／ 2〜3時間 ／ 大人2,800円 ／ 最終入館16:00</div>
+        </div></li>
+        <li><span class="time">16:00</span><div><div class="what">ホテルへ移動</div><div class="note">車で40分ほど</div></div></li>
+        <li><span class="time">17:00</span><div><div class="what">チェックイン → 18:00 夕食</div></div></li>
+      </ol>
+    </div>
+
+    <div class="card plan">
+      <h3>プランB：海女小屋でランチ</h3>
+      <p class="note">現役の海女さんが目の前で魚介を炭火で焼いてくれる。2日前までに要予約。</p>
+      <ol class="timeline">
+        <li><span class="time">13:15</span><div>
+          <div class="what"><a href="https://www.kankomie.or.jp/spot/18442">海女小屋 はちまんかまど</a>（鳥羽市相差）</div>
+          <div class="note">ランチ枠 11:45 ／ 13:15 ／ 14:45 ／ 料理体験4,500円 ／ 0599-33-1023</div>
+        </div></li>
+        <li><span class="time">15:00</span><div>
+          <div class="what">ホテルに早めにチェックイン</div>
+          <div class="note">温泉・卓球・カラオケでのんびり</div>
+        </div></li>
+        <li><span class="time">18:00</span><div><div class="what">ホテルで夕食</div></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="day2">
+    <h2>2日目 <span class="tag sun">晴れ・雨とも</span></h2>
+    <p class="lead">夫婦岩で記念写真を撮ってから内宮に参拝し、おかげ横丁で昼食をとって解散。</p>
+    <div class="card">
+      <ol class="timeline">
+        <li><span class="time">10:00</span><div><div class="what">チェックアウト・出発</div></div></li>
+        <li><span class="time">10:50</span><div>
+          <div class="what">夫婦岩（二見興玉神社）</div>
+          <div class="note">夫婦円満の名所。家族の記念写真を</div>
+        </div></li>
+        <li><span class="time">11:30</span><div>
+          <div class="what">伊勢神宮 内宮参拝</div>
+          <div class="note">夫婦岩から車で20分ほど。駐車場は昼前から混む</div>
+        </div></li>
+        <li><span class="time">12:30</span><div>
+          <div class="what">おかげ横丁で昼食・食べ歩き・お土産</div>
+          <div class="note">伊勢うどん、てこね寿司、赤福など</div>
+        </div></li>
+        <li><span class="time">15:00</span><div>
+          <div class="what">解散</div>
+          <div class="note">伊勢西ICからそれぞれ帰路へ</div>
+        </div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="prep">
+    <h2>事前準備・注意点</h2>
+    <div class="card">
+      <ul class="check">
+        <li>前日に天気を見て、1日目を晴れ／雨どちらのプランにするか決める</li>
+        <li>雨プランBにするなら、2日前までに海女小屋を予約</li>
+        <li>前日にクルーズの運航状況を確認</li>
+        <li>退職祝いのケーキやメッセージをホテルに事前相談</li>
+        <li>内宮の駐車場が混むので、夫婦岩は長居しすぎない</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <footer>
+      <p>料金・営業時間は調べた時点（2026年11月）の情報です。お出かけ前に各施設の最新情報を確認してください。</p>
+      <p>参考：</p>
+      <ul>
+        <li><a href="https://www.kankomie.or.jp/report/detail_610.html">観光三重｜賢島エスパーニャクルーズ</a></li>
+        <li><a href="https://www.kankomie.or.jp/spot/2307">観光三重｜横山展望台</a></li>
+        <li><a href="https://www.navitime.co.jp/category/0102001/24215/">NAVITIME｜志摩パークゴルフ場</a></li>
+        <li><a href="https://www.kankomie.or.jp/report/213">観光三重｜鳥羽水族館</a></li>
+        <li><a href="https://www.kankomie.or.jp/spot/18442">観光三重｜海女小屋 はちまんかまど</a></li>
+        <li><a href="https://www.kankomie.or.jp/spot/14616">観光三重｜里創人倶楽部 伊勢志摩</a></li>
+      </ul>
+    </footer>
+  </section>
+
+</main>
+</body>
+</html>
