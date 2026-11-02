@@ -237,6 +237,25 @@
   .sources ul { padding-left: 18px; margin: 6px 0 0; }
   .sources a { color: var(--muted); }
 
+  /* ===== ページを開いたときの演出 ===== */
+  @media (prefers-reduced-motion: no-preference) {
+    .noshi .iwai   { animation: fade .6s ease-out .1s both; }
+    .noshi .big .ch { display: inline-block; animation: ink .7s cubic-bezier(.2,.7,.2,1) calc(.35s + var(--i) * .16s) both; }
+    .noshi .small  { animation: fade .7s ease-out 1.1s both; }
+    .mizuhiki      { transform-origin: right center; animation: tie .9s cubic-bezier(.6,0,.2,1) 1.2s both; }
+    .cover-meta .dates { animation: rise .6s ease-out 1.5s both; }
+    .cover-meta .msg   { animation: rise .6s ease-out 1.7s both; }
+    .countdown         { animation: pop .45s cubic-bezier(.3,1.6,.5,1) 2.1s both; }
+  }
+  @keyframes ink {
+    from { opacity: 0; transform: translateY(-14px); filter: blur(6px); }
+    to   { opacity: 1; transform: none; filter: blur(0); }
+  }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes tie  { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes pop  { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: none; } }
+
   /* ===== タップしたときの動き ===== */
   .actions a, .tab, .weather button {
     -webkit-tap-highlight-color: transparent;
@@ -295,7 +314,7 @@
     </div>
     <h1 class="noshi" aria-label="父の退職祝い 伊勢志摩 家族旅行のしおり">
       <span class="iwai" aria-hidden="true">退職祝</span>
-      <span class="big" aria-hidden="true">伊勢志摩</span>
+      <span class="big" aria-hidden="true"><span class="ch" style="--i:0">伊</span><span class="ch" style="--i:1">勢</span><span class="ch" style="--i:2">志</span><span class="ch" style="--i:3">摩</span></span>
       <span class="small" aria-hidden="true">家族旅行のしおり</span>
     </h1>
   </div>
