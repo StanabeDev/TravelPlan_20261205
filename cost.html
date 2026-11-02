@@ -23,6 +23,7 @@
     --c-hotel: #22385f;
     --c-move: #2c7a70;
     --c-food: #a87b4a;
+    --c-tour: #7a5c8e;
     --c-gift: #b8323a;
     --c-left: #dfe4e6;
     --serif: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
@@ -42,6 +43,7 @@
       --c-hotel: #8fb0e0;
       --c-move: #6cc2b5;
       --c-food: #d9ad7c;
+      --c-tour: #b79ad0;
       --c-gift: #e2737a;
       --c-left: #2a3442;
     }
@@ -128,6 +130,7 @@
     .bar span:nth-child(2) { animation-delay: .12s; }
     .bar span:nth-child(3) { animation-delay: .24s; }
     .bar span:nth-child(4) { animation-delay: .36s; }
+    .bar span:nth-child(5) { animation-delay: .48s; }
     @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   }
 </style>
@@ -183,6 +186,15 @@
         { label: '2日目 昼食', yen: 14000, note: '2,000円 × 7人' }
       ],
       note: '1日目の夕食と2日目の朝食はホテル代に含まれます' },
+    { key: 'tour', name: '観光費', color: 'var(--c-tour)', status: 'plan',
+      items: [
+        { label: '1日目 英虞湾クルーズ', yen: 13300, note: '1,900円 × 7人' },
+        { label: '1日目 志摩パークゴルフ場', yen: 7000, note: '800円 × 7人 ＋ 用具レンタル200円 × 7人' },
+        { label: '1日目 横山展望台', yen: 0 },
+        { label: '2日目 伊勢志摩スカイライン', yen: 2500, note: '1,250円 × 車2台（台数は要確認）' },
+        { label: '2日目 朝熊山頂の展望足湯', yen: 700, note: '100円 × 7人' }
+      ],
+      note: '1日目は晴れプランで計算。雨Aなら1日目の分が21,700円（せんぐう館300円＋鳥羽水族館2,800円 × 7人）、雨Bなら4,550円（せんぐう館300円＋河崎商人館350円 × 7人）になります。駐車場代は含みません' },
     { key: 'gift', name: 'プレゼント代', color: 'var(--c-gift)', status: 'tbd', items: [] }
   ];
   // ===============================================
@@ -232,7 +244,7 @@
       '<span class="cat-amt">' + (c.total ? yen(c.total) : '—') + '</span></div>';
     if (c.items.length) {
       html += '<ul class="items">' + c.items.map(function (i) {
-        return '<li><span>' + esc(i.label) + (i.note ? '<small>' + esc(i.note) + '</small>' : '') + '</span><span class="yen">' + yen(i.yen) + '</span></li>';
+        return '<li><span>' + esc(i.label) + (i.note ? '<small>' + esc(i.note) + '</small>' : '') + '</span><span class="yen">' + (i.yen ? yen(i.yen) : '無料') + '</span></li>';
       }).join('') + '</ul>';
     } else if (c.key === 'gift') {
       html += '<p class="cat-note">内容は未定。ほかの費用を引いた残りは <b>' + yen(Math.max(left, 0)) + '</b> です。</p>';
