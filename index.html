@@ -237,6 +237,39 @@
   .sources ul { padding-left: 18px; margin: 6px 0 0; }
   .sources a { color: var(--muted); }
 
+  /* ===== タップしたときの動き ===== */
+  .actions a, .tab, .weather button {
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .12s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease;
+  }
+  .actions a { position: relative; }
+  .actions a:active {
+    transform: scale(.94);
+    box-shadow: 0 0 0 5px color-mix(in srgb, currentColor 16%, transparent);
+  }
+  .tab:active, .weather button:active { transform: scale(.95); }
+  .sources a { transition: color .2s ease; }
+  .sources a:active { color: var(--ai); }
+  .actions a.tapped::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit;
+    border: 2px solid currentColor; opacity: 0;
+    animation: ring .5s ease-out;
+  }
+  @keyframes ring {
+    from { opacity: .55; transform: scale(1); }
+    to   { opacity: 0;   transform: scale(1.35); }
+  }
+  @media (hover: hover) {
+    .actions a:hover { transform: translateY(-1px); filter: brightness(.96); }
+    .tab:hover:not([aria-selected="true"]), .weather button:hover:not([aria-pressed="true"]) { background: var(--hair); }
+    .sources a:hover { color: var(--ai); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .actions a, .tab, .weather button { transition: none; }
+    .actions a:active, .tab:active, .weather button:active, .actions a:hover { transform: none; }
+    .actions a.tapped::after { animation: none; }
+  }
+
   @media (min-width: 560px) {
     .noshi .big { font-size: 52px; }
   }
@@ -579,6 +612,15 @@
     }
   }
   planBtns.forEach(function (b) { b.addEventListener('click', markNext); });
+
+  // タップしたボタンに波紋を出す
+  document.addEventListener('touchstart', function () {}, { passive: true });
+  document.querySelectorAll('.actions a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      a.classList.remove('tapped'); void a.offsetWidth; a.classList.add('tapped');
+      setTimeout(function () { a.classList.remove('tapped'); }, 550);
+    });
+  });
 
   var savedTab = store.get('tab');
   if (now.date === DAY1) showTab('1', false);
