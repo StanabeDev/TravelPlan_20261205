@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>伊勢志摩旅行 費用まとめ</title>
+<meta name="theme-color" content="#22385f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@600;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f2f4f3;
+    --surface: #ffffff;
+    --ink: #1a2230;
+    --muted: #5c6878;
+    --hair: #dfe4e6;
+    --ai: #22385f;
+    --cover: #22385f;
+    --ai-soft: #e3e9f2;
+    --beni: #b8323a;
+    --c-hotel: #22385f;
+    --c-move: #2c7a70;
+    --c-food: #a87b4a;
+    --c-gift: #b8323a;
+    --c-left: #dfe4e6;
+    --serif: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --sans: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #11161d;
+      --surface: #19202a;
+      --ink: #e8edf2;
+      --muted: #9aa7b6;
+      --hair: #2a3442;
+      --ai: #8fb0e0;
+      --cover: #1b2c4b;
+      --ai-soft: #1f2b3d;
+      --beni: #e2737a;
+      --c-hotel: #8fb0e0;
+      --c-move: #6cc2b5;
+      --c-food: #d9ad7c;
+      --c-gift: #e2737a;
+      --c-left: #2a3442;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.7; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--c-move); outline-offset: 2px; border-radius: 6px; }
+
+  header {
+    background: var(--cover); color: #fff;
+    padding: max(18px, env(safe-area-inset-top)) 16px 22px; position: relative;
+  }
+  .head-inner { max-width: 640px; margin: 0 auto; }
+  .back {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 14px; font-weight: 700; text-decoration: none;
+    padding: 6px 12px 6px 8px; border-radius: 999px;
+    background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
+    transition: transform .12s ease;
+  }
+  .back:active { transform: scale(.95); }
+  .back svg { width: 16px; height: 16px; }
+  header h1 { font-family: var(--serif); font-weight: 900; font-size: 28px; line-height: 1.3; margin: 18px 0 2px; }
+  header p { margin: 0; font-size: 14px; opacity: .85; }
+  .mizuhiki {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 8px;
+    background:
+      linear-gradient(var(--beni), var(--beni)) 0 0 / 100% 3px no-repeat,
+      linear-gradient(#fff, #fff) 0 5px / 100% 3px no-repeat;
+  }
+
+  main { max-width: 640px; margin: 0 auto; padding: 22px 16px 56px; }
+
+  /* 予算の全体像 */
+  .overview { background: var(--surface); border: 1px solid var(--hair); border-radius: 16px; padding: 18px 16px; }
+  .ov-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .ov-label { font-size: 14px; color: var(--muted); }
+  .ov-total { font-family: var(--serif); font-weight: 900; font-size: 32px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .ov-total small { font-family: var(--sans); font-size: 15px; font-weight: 700; margin-left: 2px; }
+  .ov-sub { font-size: 14px; color: var(--muted); margin-top: 2px; }
+  .ov-sub b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+  .bar { display: flex; height: 18px; border-radius: 6px; overflow: hidden; margin: 16px 0 10px; background: var(--c-left); }
+  .bar span { display: block; height: 100%; }
+  .bar span + span { box-shadow: inset 2px 0 0 var(--surface); }
+  .legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; font-size: 13.5px; }
+  .legend li { display: flex; align-items: center; gap: 6px; }
+  .legend i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .legend .amt { margin-left: auto; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+  .left-box {
+    margin-top: 14px; padding: 12px 14px; border-radius: 12px;
+    background: var(--ai-soft); display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  }
+  .left-box span { font-size: 14px; }
+  .left-box b { font-family: var(--serif); font-weight: 900; font-size: 22px; font-variant-numeric: tabular-nums; color: var(--ai); }
+  .left-box.over b { color: var(--beni); }
+
+  /* カテゴリ別 */
+  h2 { font-family: var(--serif); font-weight: 900; font-size: 21px; margin: 32px 0 12px; padding-left: 10px; border-left: 4px solid var(--ai); line-height: 1.3; }
+  .cat { background: var(--surface); border: 1px solid var(--hair); border-radius: 14px; padding: 14px 16px; }
+  .cat + .cat { margin-top: 10px; }
+  .cat-head { display: flex; align-items: center; gap: 8px; }
+  .cat-head i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .cat-head h3 { margin: 0; font-size: 17px; }
+  .status { font-size: 12px; font-weight: 700; padding: 1px 9px; border-radius: 999px; border: 1px solid currentColor; }
+  .status.done { color: var(--c-move); }
+  .status.plan { color: var(--muted); }
+  .status.tbd { color: var(--beni); }
+  .cat-amt { margin-left: auto; font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; }
+  .items { list-style: none; margin: 10px 0 0; padding: 0; border-top: 1px dashed var(--hair); }
+  .items li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--hair); font-size: 14.5px; }
+  .items li:last-child { border-bottom: 0; }
+  .items .yen { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .items small { display: block; color: var(--muted); font-size: 12.5px; }
+  .cat-note { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+
+  .foot { margin-top: 28px; font-size: 13px; color: var(--muted); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .bar span { animation: grow .9s cubic-bezier(.3,.7,.2,1) both; transform-origin: left; }
+    .bar span:nth-child(2) { animation-delay: .12s; }
+    .bar span:nth-child(3) { animation-delay: .24s; }
+    .bar span:nth-child(4) { animation-delay: .36s; }
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-inner">
+    <a class="back" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>しおりに戻る</a>
+    <h1>費用まとめ</h1>
+    <p>父の退職祝い 伊勢志摩旅行（7人・1泊2日）</p>
+  </div>
+  <div class="mizuhiki" aria-hidden="true"></div>
+</header>
+
+<main>
+  <section class="overview" aria-label="予算の全体像">
+    <div class="ov-row">
+      <div>
+        <div class="ov-label">予算</div>
+        <div class="ov-total" id="budget"></div>
+      </div>
+    </div>
+    <div class="ov-sub">見込みの合計 <b id="planned"></b>（うち支払い済み <b id="paid"></b>）</div>
+    <div class="bar" id="bar" role="img"></div>
+    <ul class="legend" id="legend"></ul>
+    <div class="left-box" id="leftBox"><span id="leftLabel">プレゼントに使える残り</span><b id="left"></b></div>
+  </section>
+
+  <h2>カテゴリ別</h2>
+  <div id="cats"></div>
+
+  <p class="foot">ガソリン代は各自負担のため含めていません。金額は大まかな見込みです。</p>
+</main>
+
+<script>
+(function () {
+  // ===== ここを書き換えると全体が再計算されます =====
+  var BUDGET = 360000;
+  var CATEGORIES = [
+    { key: 'hotel', name: 'ホテル代', color: 'var(--c-hotel)', status: 'done',
+      items: [ { label: '里創人倶楽部 伊勢志摩（1泊2食・7人）', yen: 200420, note: '1日目の夕食・2日目の朝食込み' } ] },
+    { key: 'move', name: '交通費', color: 'var(--c-move)', status: 'plan',
+      items: [
+        { label: '米原 ↔ 東京', yen: 24200 },
+        { label: '滋賀 ↔ 伊勢志摩（高速代）', yen: 3000 },
+        { label: '横浜 ↔ 伊勢志摩（高速代）', yen: 15000 }
+      ],
+      note: 'ガソリン代は各自' },
+    { key: 'food', name: '飲食代', color: 'var(--c-food)', status: 'plan',
+      items: [
+        { label: '1日目 昼食', yen: 14000, note: '2,000円 × 7人' },
+        { label: '2日目 昼食', yen: 14000, note: '2,000円 × 7人' }
+      ],
+      note: '1日目の夕食と2日目の朝食はホテル代に含まれます' },
+    { key: 'gift', name: 'プレゼント代', color: 'var(--c-gift)', status: 'tbd', items: [] }
+  ];
+  // ===============================================
+
+  var STATUS = { done: '支払い済み', plan: '見込み', tbd: '未定' };
+  function yen(n) { return n.toLocaleString('ja-JP') + '円'; }
+  function sum(c) { return c.items.reduce(function (a, i) { return a + i.yen; }, 0); }
+  function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+  var planned = 0, paid = 0;
+  CATEGORIES.forEach(function (c) { c.total = sum(c); planned += c.total; if (c.status === 'done') paid += c.total; });
+  var left = BUDGET - planned;
+
+  document.getElementById('budget').innerHTML = BUDGET.toLocaleString('ja-JP') + '<small>円</small>';
+  document.getElementById('planned').textContent = yen(planned);
+  document.getElementById('paid').textContent = yen(paid);
+  document.getElementById('left').textContent = (left < 0 ? '−' : '') + yen(Math.abs(left));
+  var giftTotal = CATEGORIES.filter(function (c) { return c.key === 'gift'; })[0].total;
+  if (giftTotal > 0) document.getElementById('leftLabel').textContent = '予算の残り';
+  if (left < 0) { document.getElementById('leftBox').classList.add('over'); document.getElementById('leftLabel').textContent = '予算オーバー'; }
+
+  var bar = document.getElementById('bar'), legend = document.getElementById('legend');
+  var label = [];
+  CATEGORIES.forEach(function (c) {
+    if (c.total > 0) {
+      var s = document.createElement('span');
+      s.style.width = (c.total / Math.max(BUDGET, planned) * 100) + '%';
+      s.style.background = c.color;
+      bar.appendChild(s);
+    }
+    var li = document.createElement('li');
+    li.innerHTML = '<i style="background:' + c.color + '"></i>' + esc(c.name) + '<span class="amt">' + (c.total ? yen(c.total) : '未定') + '</span>';
+    legend.appendChild(li);
+    label.push(c.name + ' ' + (c.total ? yen(c.total) : '未定'));
+  });
+  if (left > 0) {
+    var li2 = document.createElement('li');
+    li2.innerHTML = '<i style="background:var(--c-left)"></i>残り<span class="amt">' + yen(left) + '</span>';
+    legend.appendChild(li2);
+  }
+  bar.setAttribute('aria-label', '予算' + yen(BUDGET) + 'の内訳：' + label.join('、'));
+
+  var cats = document.getElementById('cats');
+  CATEGORIES.forEach(function (c) {
+    var html = '<div class="cat"><div class="cat-head"><i style="background:' + c.color + '"></i><h3>' + esc(c.name) + '</h3>' +
+      '<span class="status ' + c.status + '">' + STATUS[c.status] + '</span>' +
+      '<span class="cat-amt">' + (c.total ? yen(c.total) : '—') + '</span></div>';
+    if (c.items.length) {
+      html += '<ul class="items">' + c.items.map(function (i) {
+        return '<li><span>' + esc(i.label) + (i.note ? '<small>' + esc(i.note) + '</small>' : '') + '</span><span class="yen">' + yen(i.yen) + '</span></li>';
+      }).join('') + '</ul>';
+    } else if (c.key === 'gift') {
+      html += '<p class="cat-note">内容は未定。ほかの費用を引いた残りは <b>' + yen(Math.max(left, 0)) + '</b> です。</p>';
+    }
+    if (c.note) html += '<p class="cat-note">' + esc(c.note) + '</p>';
+    cats.insertAdjacentHTML('beforeend', html + '</div>');
+  });
+})();
+</script>
+</body>
+</html>

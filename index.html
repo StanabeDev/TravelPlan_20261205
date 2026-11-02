@@ -240,7 +240,17 @@
   dl.facts dt { color: var(--muted); }
   dl.facts dd { margin: 0; }
 
-  .sources { margin-top: 36px; font-size: 13px; color: var(--muted); }
+  .cost-link {
+    margin-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    text-decoration: none; background: var(--surface); border: 1px solid var(--hair); border-radius: 14px;
+    padding: 14px 16px; -webkit-tap-highlight-color: transparent;
+    transition: transform .12s ease, box-shadow .2s ease;
+  }
+  .cost-link b { display: block; font-size: 16.5px; }
+  .cost-link small { display: block; font-size: 13px; color: var(--muted); }
+  .cost-link svg { width: 20px; height: 20px; color: var(--ai); flex: none; }
+  .cost-link:active { transform: scale(.98); box-shadow: 0 0 0 5px var(--ai-soft); }
+  .sources { margin-top: 24px; font-size: 13px; color: var(--muted); }
   .sources ul { padding-left: 18px; margin: 6px 0 0; }
   .sources a { color: var(--muted); }
 
@@ -624,6 +634,11 @@
     </div>
     <p class="note" style="margin:10px 0 0;color:var(--muted);font-size:13px">営業時間・定休日は紹介記事の掲載時点のものです。行く前にお店に確認してください。</p>
   </section>
+
+    <a class="cost-link" href="cost.html">
+      <span><b>費用まとめ</b><small>予算・ホテル代・交通費・飲食代・プレゼント代</small></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </a>
 
     <div class="sources">
       料金・営業時間は2026年11月に調べた情報です。お出かけ前に各施設の最新情報を確認してください。
