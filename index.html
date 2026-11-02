@@ -119,7 +119,7 @@
   }
   .tabs-inner {
     max-width: 640px; margin: 0 auto; padding: 8px 16px;
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
   }
   .tab {
     border: 0; background: transparent; cursor: pointer;
@@ -273,6 +273,7 @@
   <div class="tabs-inner" role="tablist">
     <button class="tab" role="tab" id="tab-1" aria-controls="p-1" aria-selected="true" data-tab="1">1日目</button>
     <button class="tab" role="tab" id="tab-2" aria-controls="p-2" aria-selected="false" data-tab="2">2日目</button>
+    <button class="tab" role="tab" id="tab-cand" aria-controls="p-cand" aria-selected="false" data-tab="cand">候補</button>
   </div>
 </nav>
 
@@ -452,6 +453,29 @@
     </ol>
   </section>
 
+  <!-- ===== 観光地候補 ===== -->
+  <section class="panel" id="p-cand" role="tabpanel" aria-labelledby="tab-cand" hidden>
+    <div class="day-head">
+      <h2>観光地の候補</h2>
+      <p>予定には入れていないけれど、行けそうなら寄りたい場所です。</p>
+    </div>
+    <div class="card">
+      <h3>ミキモト真珠島</h3>
+      <p class="note" style="margin:0;color:var(--muted);font-size:14px">鳥羽水族館のすぐ隣。真珠博物館や御木本幸吉記念館は屋内で、雨でも楽しめます。白い磯着の海女さんの潜水実演も見られます。</p>
+      <dl class="facts">
+        <dt>場所</dt><dd>鳥羽市（鳥羽駅から徒歩5分）</dd>
+        <dt>営業時間</dt><dd>9:00〜17:00（季節で変わるので12月は要確認）</dd>
+        <dt>入場料</dt><dd>大人1,650円</dd>
+        <dt>駐車場</dt><dd>120台、2時間600円</dd>
+      </dl>
+      <div class="actions">
+        <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%9F%E3%82%AD%E3%83%A2%E3%83%88%E7%9C%9F%E7%8F%A0%E5%B3%B6"><svg><use href="#i-map"/></svg>地図</a>
+        <a class="tel" href="tel:0599252028"><svg><use href="#i-tel"/></svg>電話</a>
+        <a class="web" href="https://rurubu.jp/andmore/spot/80025011">詳しく</a>
+      </div>
+    </div>
+  </section>
+
     <div class="sources">
       料金・営業時間は2026年11月に調べた情報です。お出かけ前に各施設の最新情報を確認してください。
       <ul>
@@ -459,6 +483,7 @@
         <li><a href="https://www.kankomie.or.jp/spot/2307">観光三重｜横山展望台</a></li>
         <li><a href="https://www.kanko-shima.com/purpose/2031/">志摩市観光協会｜志摩パークゴルフ場</a></li>
         <li><a href="https://www.kankomie.or.jp/report/213">観光三重｜鳥羽水族館</a></li>
+        <li><a href="https://rurubu.jp/andmore/spot/80025011">るるぶ｜ミキモト真珠島</a></li>
         <li><a href="https://www.kankomie.or.jp/spot/18442">観光三重｜海女小屋 はちまんかまど</a></li>
         <li><a href="https://www.kankomie.or.jp/spot/14616">観光三重｜里創人倶楽部 伊勢志摩</a></li>
         <li><a href="https://reserve.489ban.net/client/resortclub-iseshima/0/detail/1073214">里創人倶楽部 伊勢志摩｜【プレミアム】特選会席プラン</a></li>
