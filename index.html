@@ -119,7 +119,7 @@
   }
   .tabs-inner {
     max-width: 640px; margin: 0 auto; padding: 8px 16px;
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
   }
   .tab {
     border: 0; background: transparent; cursor: pointer;
@@ -273,8 +273,6 @@
   <div class="tabs-inner" role="tablist">
     <button class="tab" role="tab" id="tab-1" aria-controls="p-1" aria-selected="true" data-tab="1">1日目</button>
     <button class="tab" role="tab" id="tab-2" aria-controls="p-2" aria-selected="false" data-tab="2">2日目</button>
-    <button class="tab" role="tab" id="tab-prep" aria-controls="p-prep" aria-selected="false" data-tab="prep">準備</button>
-    <button class="tab" role="tab" id="tab-hotel" aria-controls="p-hotel" aria-selected="false" data-tab="hotel">宿</button>
   </div>
 </nav>
 
@@ -454,50 +452,6 @@
     </ol>
   </section>
 
-  <!-- ===== 準備 ===== -->
-  <section class="panel" id="p-prep" role="tabpanel" aria-labelledby="tab-prep" hidden>
-    <div class="day-head">
-      <h2>準備</h2>
-      <p>タップでチェックできます。チェックはこのスマホにだけ残ります。</p>
-    </div>
-    <ul class="checklist">
-      <li><label><input type="checkbox" data-key="ck-cake"><span>夕食を19:30からで予約し、退職祝いのケーキ・メッセージも相談<small>宿 0599-57-2130</small></span></label></li>
-      <li><label><input type="checkbox" data-key="ck-amagoya"><span>雨B（海女小屋）にするなら2日前までに予約<small>はちまんかまど 0599-33-1023</small></span></label></li>
-      <li><label><input type="checkbox" data-key="ck-weather"><span>前日に天気を見て、1日目のプランを決める</span></label></li>
-      <li><label><input type="checkbox" data-key="ck-cruise"><span>前日にクルーズの運航状況を確認<small>0599-43-1023</small></span></label></li>
-      <li><label><input type="checkbox" data-key="ck-naiku"><span>2日目は夫婦岩で長居しすぎない<small>内宮の駐車場が昼前から混むため</small></span></label></li>
-    </ul>
-  </section>
-
-  <!-- ===== 宿 ===== -->
-  <section class="panel" id="p-hotel" role="tabpanel" aria-labelledby="tab-hotel" hidden>
-    <div class="day-head">
-      <h2>宿と参加メンバー</h2>
-    </div>
-    <div class="card">
-      <h3>里創人倶楽部 伊勢志摩</h3>
-      <p class="note" style="margin:0;color:var(--muted);font-size:14px">的矢湾を望むオーシャンビューの宿。ドリンクはオールインクルーシブ</p>
-      <dl class="facts">
-        <dt>住所</dt><dd>志摩市磯部町的矢314</dd>
-        <dt>チェックイン</dt><dd>15:00〜（17:30頃の予定）</dd>
-        <dt>チェックアウト</dt><dd>10:00</dd>
-        <dt>夕食</dt><dd>19:30〜　【プレミアム】伊勢志摩 美食の特選会席</dd>
-        <dt>駐車場</dt><dd>無料</dd>
-      </dl>
-      <div class="actions">
-        <a href="https://www.google.com/maps/search/?api=1&query=%E9%87%8C%E5%89%B5%E4%BA%BA%E5%80%B6%E6%A5%BD%E9%83%A8%20%E4%BC%8A%E5%8B%A2%E5%BF%97%E6%91%A9"><svg><use href="#i-map"/></svg>地図</a>
-        <a class="tel" href="tel:0599572130"><svg><use href="#i-tel"/></svg>電話</a>
-        <a class="web" href="https://www.kankomie.or.jp/spot/14616">詳しく</a>
-      </div>
-    </div>
-    <div class="card">
-      <h3>移動</h3>
-      <dl class="facts">
-        <dt>滋賀から車</dt><dd>父・母・妹夫婦・弟</dd>
-        <dt>横浜から車</dt><dd>兄夫婦</dd>
-      </dl>
-    </div>
-
     <div class="sources">
       料金・営業時間は2026年11月に調べた情報です。お出かけ前に各施設の最新情報を確認してください。
       <ul>
@@ -510,7 +464,7 @@
         <li><a href="https://reserve.489ban.net/client/resortclub-iseshima/0/detail/1073214">里創人倶楽部 伊勢志摩｜【プレミアム】特選会席プラン</a></li>
       </ul>
     </div>
-  </section>
+
 
 </main>
 
