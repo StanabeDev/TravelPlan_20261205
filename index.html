@@ -288,8 +288,8 @@
 
     <div class="weather" role="group" aria-label="1日目のプラン">
       <button data-plan="sun" aria-pressed="true">晴れ<small>クルーズ・展望台</small></button>
-      <button data-plan="rainA" aria-pressed="false">雨 A<small>鳥羽水族館</small></button>
-      <button data-plan="rainB" aria-pressed="false">雨 B<small>海女小屋ランチ</small></button>
+      <button data-plan="rainA" aria-pressed="false">雨 A<small>外宮・水族館</small></button>
+      <button data-plan="rainB" aria-pressed="false">雨 B<small>外宮・伊勢河崎</small></button>
     </div>
 
     <!-- 晴れ -->
@@ -350,16 +350,23 @@
 
     <!-- 雨A -->
     <div class="plan" data-plan="rainA" hidden>
-      <p class="plan-note">集合場所を鳥羽に変えて屋内で。予約不要なので、当日の天気で切り替えられます。</p>
+      <p class="plan-note">外宮にお参りしてから鳥羽水族館へ。2日目の内宮と合わせて「外宮→内宮」の順にお参りできます。</p>
       <ol class="timeline">
         <li class="stop"><span class="time">13:00</span><div class="body">
-          <h3>鳥羽駅周辺で合流・昼食</h3>
-          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E9%B3%A5%E7%BE%BD%E9%A7%85"><svg><use href="#i-map"/></svg>地図</a></div>
+          <h3>外宮参道で合流・昼食</h3>
+          <p class="note">伊勢ICから近く、滋賀組・横浜組とも高速を降りてすぐ</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%96%E5%AE%AE%E5%8F%82%E9%81%93"><svg><use href="#i-map"/></svg>地図</a></div>
         </div></li>
-        <li class="move"><span>徒歩約10分</span></li>
-        <li class="stop highlight"><span class="time">13:45</span><div class="body">
+        <li class="move"><span>徒歩すぐ</span></li>
+        <li class="stop highlight"><span class="time">13:40</span><div class="body">
+          <h3>外宮参拝 → せんぐう館</h3>
+          <p class="note">せんぐう館は外宮の境内にある博物館。外宮正殿の原寸大模型など。大人300円、最終入館16:00</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E5%8B%A2%E7%A5%9E%E5%AE%AE%20%E5%A4%96%E5%AE%AE"><svg><use href="#i-map"/></svg>地図</a><a class="web" href="https://www.mapple.net/region/a0405000000_g04020500/spot/">詳しく</a></div>
+        </div></li>
+        <li class="move"><span>車で約20分</span></li>
+        <li class="stop highlight"><span class="time">15:00</span><div class="body">
           <h3>鳥羽水族館</h3>
-          <p class="note">約1200種、日本で唯一ジュゴンに会える。2時間ほど、大人2,800円、最終入館16:00</p>
+          <p class="note">約1200種、日本で唯一ジュゴンに会える。2時間ほど、大人2,800円、閉館17:00（最終入館16:00）</p>
           <div class="actions">
             <a href="https://www.google.com/maps/search/?api=1&query=%E9%B3%A5%E7%BE%BD%E6%B0%B4%E6%97%8F%E9%A4%A8"><svg><use href="#i-map"/></svg>地図</a>
             <a class="tel" href="tel:0599252555"><svg><use href="#i-tel"/></svg>電話</a>
@@ -367,7 +374,7 @@
           </div>
         </div></li>
         <li class="move"><span>車で約40分</span></li>
-        <li class="stop"><span class="time">17:00</span><div class="body">
+        <li class="stop"><span class="time">17:40</span><div class="body">
           <h3>ホテルにチェックイン</h3>
           <p class="note">夕食まではホテルで卓球。のんびり過ごすのもOK</p>
           <div class="actions">
@@ -387,21 +394,29 @@
 
     <!-- 雨B -->
     <div class="plan" data-plan="rainB" hidden>
-      <p class="plan-note">現役の海女さんが目の前で魚介を炭火で焼いてくれます。2日前までに予約が必要です。</p>
+      <p class="plan-note">外宮、遷宮の博物館、昔の商人町と回る「お伊勢参りの歴史をたどる日」。2日目の内宮と合わせて「外宮→内宮」の順にお参りできます。</p>
       <ol class="timeline">
-        <li class="stop highlight"><span class="time">13:00</span><div class="body">
-          <h3>海女小屋 はちまんかまどで合流</h3>
-          <p class="note">鳥羽市相差。13:15のランチ枠を予約。料理体験4,500円</p>
-          <div class="actions">
-            <a href="https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E5%A5%B3%E5%B0%8F%E5%B1%8B%E3%81%AF%E3%81%A1%E3%81%BE%E3%82%93%E3%81%8B%E3%81%BE%E3%81%A9"><svg><use href="#i-map"/></svg>地図</a>
-            <a class="tel" href="tel:0599331023"><svg><use href="#i-tel"/></svg>予約電話</a>
-            <a class="web" href="https://www.kankomie.or.jp/spot/18442">詳しく</a>
-          </div>
+        <li class="stop"><span class="time">13:00</span><div class="body">
+          <h3>外宮参道で合流・昼食</h3>
+          <p class="note">伊勢ICから近く、滋賀組・横浜組とも高速を降りてすぐ</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%96%E5%AE%AE%E5%8F%82%E9%81%93"><svg><use href="#i-map"/></svg>地図</a></div>
         </div></li>
-        <li class="move"><span>車で移動</span></li>
-        <li class="stop"><span class="time">15:00</span><div class="body">
-          <h3>ホテルに早めにチェックイン</h3>
-          <p class="note">温泉・卓球・カラオケでのんびり</p>
+        <li class="move"><span>徒歩すぐ</span></li>
+        <li class="stop highlight"><span class="time">14:00</span><div class="body">
+          <h3>外宮参拝 → せんぐう館</h3>
+          <p class="note">せんぐう館は外宮の境内にある博物館。外宮正殿の原寸大模型など。大人300円、最終入館16:00</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E5%8B%A2%E7%A5%9E%E5%AE%AE%20%E5%A4%96%E5%AE%AE"><svg><use href="#i-map"/></svg>地図</a><a class="web" href="https://www.mapple.net/region/a0405000000_g04020500/spot/">詳しく</a></div>
+        </div></li>
+        <li class="move"><span>車で約5分</span></li>
+        <li class="stop highlight"><span class="time">15:45</span><div class="body">
+          <h3>伊勢河崎（河崎商人館・蔵のカフェ）</h3>
+          <p class="note">「伊勢の台所」と呼ばれた川沿いの蔵の町。酒問屋の母屋や蔵を見学でき、蔵のカフェで一息。大人350円、17:00まで</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E5%8B%A2%E6%B2%B3%E5%B4%8E%E5%95%86%E4%BA%BA%E9%A4%A8"><svg><use href="#i-map"/></svg>地図</a><a class="web" href="https://www.kankomie.or.jp/report/874">詳しく</a></div>
+        </div></li>
+        <li class="move"><span>車で約50分</span></li>
+        <li class="stop"><span class="time">17:40</span><div class="body">
+          <h3>ホテルにチェックイン</h3>
+          <p class="note">夕食まではホテルで卓球。のんびり過ごすのもOK</p>
           <div class="actions">
             <a href="https://www.google.com/maps/search/?api=1&query=%E9%87%8C%E5%89%B5%E4%BA%BA%E5%80%B6%E6%A5%BD%E9%83%A8%20%E4%BC%8A%E5%8B%A2%E5%BF%97%E6%91%A9"><svg><use href="#i-map"/></svg>地図</a>
             <a class="tel" href="tel:0599572130"><svg><use href="#i-tel"/></svg>電話</a>
@@ -484,7 +499,8 @@
         <li><a href="https://www.kanko-shima.com/purpose/2031/">志摩市観光協会｜志摩パークゴルフ場</a></li>
         <li><a href="https://www.kankomie.or.jp/report/213">観光三重｜鳥羽水族館</a></li>
         <li><a href="https://rurubu.jp/andmore/spot/80025011">るるぶ｜ミキモト真珠島</a></li>
-        <li><a href="https://www.kankomie.or.jp/spot/18442">観光三重｜海女小屋 はちまんかまど</a></li>
+        <li><a href="https://www.mapple.net/region/a0405000000_g04020500/spot/">まっぷる｜せんぐう館・伊勢河崎商人館</a></li>
+        <li><a href="https://www.kankomie.or.jp/report/874">観光三重｜伊勢河崎の町並み</a></li>
         <li><a href="https://www.kankomie.or.jp/spot/14616">観光三重｜里創人倶楽部 伊勢志摩</a></li>
         <li><a href="https://reserve.489ban.net/client/resortclub-iseshima/0/detail/1073214">里創人倶楽部 伊勢志摩｜【プレミアム】特選会席プラン</a></li>
       </ul>
