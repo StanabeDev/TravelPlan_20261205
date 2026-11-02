@@ -228,6 +228,13 @@
     background: var(--surface); border: 1px solid var(--hair); border-radius: 14px; padding: 16px;
   }
   .card + .card { margin-top: 10px; }
+  .group-title {
+    font-family: var(--serif); font-weight: 900; font-size: 19px;
+    margin: 26px 0 10px; padding-left: 10px; border-left: 4px solid var(--ai); line-height: 1.3;
+  }
+  .day-head + .group-title { margin-top: 6px; }
+  .card.shop h3 { font-size: 18px; }
+  .card.shop .genre { font-size: 12.5px; font-weight: 700; color: var(--iso); margin: 0 0 2px; }
   .card h3 { font-family: var(--serif); font-size: 20px; font-weight: 900; margin: 0 0 4px; }
   dl.facts { display: grid; grid-template-columns: 6.5em 1fr; gap: 8px 12px; margin: 12px 0 0; font-size: 15px; }
   dl.facts dt { color: var(--muted); }
@@ -350,6 +357,7 @@
       <ol class="timeline">
         <li class="stop"><span class="time">13:00</span><div class="body">
           <h3>賢島付近で合流・昼食</h3>
+          <p class="note">混雑状況によっては、各自で昼食を済ませてから合流。お店は「候補」タブに</p>
           <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E8%B3%A2%E5%B3%B6%E9%A7%85"><svg><use href="#i-map"/></svg>地図</a></div>
         </div></li>
         <li class="move"><span>徒歩すぐ</span></li>
@@ -529,9 +537,10 @@
   <!-- ===== 観光地候補 ===== -->
   <section class="panel" id="p-cand" role="tabpanel" aria-labelledby="tab-cand" hidden>
     <div class="day-head">
-      <h2>観光地の候補</h2>
-      <p>予定には入れていないけれど、行けそうなら寄りたい場所です。</p>
+      <h2>候補</h2>
+      <p>予定には入れていないけれど、行けそうなら寄りたい場所とお店です。</p>
     </div>
+    <h3 class="group-title">観光地</h3>
     <div class="card">
       <h3>ミキモト真珠島</h3>
       <p class="note" style="margin:0;color:var(--muted);font-size:14px">鳥羽水族館のすぐ隣。真珠博物館や御木本幸吉記念館は屋内で、雨でも楽しめます。白い磯着の海女さんの潜水実演も見られます。</p>
@@ -561,6 +570,54 @@
         <a class="web" href="https://www.kankomie.or.jp/spot/2938">詳しく</a>
       </div>
     </div>
+
+    <h3 class="group-title">賢島・鵜方のごはん屋さん</h3>
+    <div class="card shop">
+      <p class="genre">和食・鯛料理</p>
+      <h3>日本料理 鯛</h3>
+      <p class="note" style="margin:0;color:var(--muted);font-size:14px">鯛のお造り・煮付けなど。伊勢海老や鮑のランチコースも。落ち着いた店内で、お祝いの食事向き</p>
+      <dl class="facts">
+        <dt>場所</dt><dd>志摩市阿児町鵜方2037-1</dd>
+        <dt>ランチ</dt><dd>11:00〜14:00</dd>
+        <dt>定休日</dt><dd>月曜・火曜（月1回）</dd>
+        <dt>メモ</dt><dd>6人なら予約がおすすめ</dd>
+      </dl>
+      <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E5%BF%97%E6%91%A9%E5%B8%82%E9%98%BF%E5%85%90%E7%94%BA%E9%B5%9C%E6%96%B92037-1%20%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86%20%E9%AF%9B"><svg><use href="#i-map"/></svg>地図</a></div>
+    </div>
+    <div class="card shop">
+      <p class="genre">海鮮・定食</p>
+      <h3>海の食堂 大家族</h3>
+      <p class="note" style="margin:0;color:var(--muted);font-size:14px">海鮮丼や、その日の朝に獲れた魚の刺身定食・焼き魚定食</p>
+      <dl class="facts">
+        <dt>場所</dt><dd>志摩市阿児町鵜方4057-1 うがたファミリープラザ1F</dd>
+        <dt>ランチ</dt><dd>11:30〜14:00</dd>
+        <dt>定休日</dt><dd>水曜</dd>
+      </dl>
+      <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E3%81%AE%E9%A3%9F%E5%A0%82%20%E5%A4%A7%E5%AE%B6%E6%97%8F%20%E5%BF%97%E6%91%A9%E5%B8%82%E9%98%BF%E5%85%90%E7%94%BA%E9%B5%9C%E6%96%B9"><svg><use href="#i-map"/></svg>地図</a></div>
+    </div>
+    <div class="card shop">
+      <p class="genre">カフェ・洋食</p>
+      <h3>イワジン喫茶室</h3>
+      <p class="note" style="margin:0;color:var(--muted);font-size:14px">賢島駅前の真珠店の中にある喫茶室。志摩グルメNo.1決定戦でグランプリのブイヤベースやパスタ。クルーズ乗り場のすぐ近く</p>
+      <dl class="facts">
+        <dt>場所</dt><dd>志摩市阿児町神明733-8（賢島駅から徒歩1分）</dd>
+        <dt>ランチ</dt><dd>10:00〜17:00</dd>
+        <dt>定休日</dt><dd>水曜</dd>
+      </dl>
+      <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E3%82%A4%E3%83%AF%E3%82%B8%E3%83%B3%20%E8%B3%A2%E5%B3%B6"><svg><use href="#i-map"/></svg>地図</a></div>
+    </div>
+    <div class="card shop">
+      <p class="genre">定食・地元の食堂</p>
+      <h3>原八食堂</h3>
+      <p class="note" style="margin:0;color:var(--muted);font-size:14px">えびあおさコロッケ、天むす、伊勢うどんと天むすの定食など</p>
+      <dl class="facts">
+        <dt>場所</dt><dd>志摩市阿児町鵜方4981</dd>
+        <dt>ランチ</dt><dd>11:00〜14:00（L.O. 13:30）</dd>
+        <dt>定休日</dt><dd>火曜</dd>
+      </dl>
+      <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E5%8E%9F%E5%85%AB%E9%A3%9F%E5%A0%82%20%E5%BF%97%E6%91%A9%E5%B8%82%E9%98%BF%E5%85%90%E7%94%BA%E9%B5%9C%E6%96%B9"><svg><use href="#i-map"/></svg>地図</a></div>
+    </div>
+    <p class="note" style="margin:10px 0 0;color:var(--muted);font-size:13px">営業時間・定休日は紹介記事の掲載時点のものです。行く前にお店に確認してください。</p>
   </section>
 
     <div class="sources">
@@ -576,6 +633,8 @@
         <li><a href="https://rurubu.jp/andmore/spot/80024694">るるぶ｜おかげ横丁</a></li>
         <li><a href="https://rurubu.jp/andmore/spot/80024643">るるぶ｜伊勢神宮</a></li>
         <li><a href="https://www.kankomie.or.jp/spot/2938">観光三重｜猿田彦神社</a></li>
+        <li><a href="https://www.nap-camp.com/mag/48755">なっぷマガジン｜賢島・鵜方のランチ（日本料理 鯛・海の食堂 大家族・イワジン喫茶室）</a></li>
+        <li><a href="https://tabiiro.jp/gourmet/article/iseshima-lunch-ninkiten/">たびいろ｜伊勢志摩のランチ（原八食堂）</a></li>
         <li><a href="https://www.mapple.net/region/a0405000000_g04020500/spot/">まっぷる｜せんぐう館・伊勢河崎商人館</a></li>
         <li><a href="https://www.kankomie.or.jp/report/874">観光三重｜伊勢河崎の町並み</a></li>
         <li><a href="https://www.kankomie.or.jp/spot/14616">観光三重｜里創人倶楽部 伊勢志摩</a></li>
