@@ -154,6 +154,16 @@
   .weather button[aria-pressed="true"][data-plan="sun"] { background: var(--iso-soft); color: var(--iso); }
   .weather button[aria-pressed="true"]:not([data-plan="sun"]) { background: var(--rain-soft); color: var(--rain); }
   .plan-note { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+  .depart {
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 14px;
+    padding: 12px 14px; margin-bottom: 14px;
+  }
+  .depart h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
+  .depart ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .depart li { background: var(--ai-soft); border-radius: 10px; padding: 6px 8px; text-align: center; line-height: 1.4; }
+  .depart li span { display: block; font-size: 12.5px; color: var(--muted); }
+  .depart li b { font-size: 16px; color: var(--ai); font-variant-numeric: tabular-nums; }
+  .depart p { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
 
   /* ===== タイムライン ===== */
   .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
@@ -343,6 +353,16 @@
     <div class="day-head">
       <h2>1日目　英虞湾を楽しむ</h2>
       <p>天気に合わせてプランを選んでください。</p>
+    </div>
+
+    <div class="depart">
+      <h3>出発時間の目安</h3>
+      <ul>
+        <li><span>お父さん組</span><b>10:00ごろ</b></li>
+        <li><span>妹組</span><b>10:30ごろ</b></li>
+        <li><span>兄組</span><b>6:30ごろ</b></li>
+      </ul>
+      <p>実際の出発時間は、道路状況を見て各自で確認してください。</p>
     </div>
 
     <div class="weather" role="group" aria-label="1日目のプラン">
