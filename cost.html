@@ -113,6 +113,7 @@
   .cat-head h3 { margin: 0; font-size: 17px; }
   .status { font-size: 12px; font-weight: 700; padding: 1px 9px; border-radius: 999px; border: 1px solid currentColor; }
   .status.done { color: var(--c-move); }
+  .status.fixed { color: var(--ai); }
   .status.plan { color: var(--muted); }
   .status.tbd { color: var(--beni); }
   .cat-amt { margin-left: auto; font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; }
@@ -194,7 +195,7 @@
         { label: '2日目 伊勢志摩スカイライン', yen: 3750, note: '1,250円 × 車3台' }
       ],
       note: '1日目は晴れプラン、2日目は案1で計算。雨Aなら1日目の分が21,700円（せんぐう館300円＋鳥羽水族館2,800円 × 7人）、雨Bなら4,550円（せんぐう館300円＋河崎商人館350円 × 7人）になります。駐車場代は含みません' },
-    { key: 'gift', name: 'プレゼント代', color: 'var(--c-gift)', status: 'plan',
+    { key: 'gift', name: 'プレゼント代', color: 'var(--c-gift)', status: 'fixed',
       items: [
         { label: 'オリジナルタオル', yen: 16727 },
         { label: '旅行カタログ', yen: 37070 },
@@ -203,7 +204,7 @@
   ];
   // ===============================================
 
-  var STATUS = { done: '支払い済み', plan: '見込み', tbd: '未定' };
+  var STATUS = { done: '支払い済み', fixed: '確定', plan: '見込み', tbd: '未定' };
   function yen(n) { return n.toLocaleString('ja-JP') + '円'; }
   function sum(c) { return c.items.reduce(function (a, i) { return a + i.yen; }, 0); }
   function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
