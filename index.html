@@ -154,6 +154,9 @@
   .weather button[aria-pressed="true"][data-plan="sun"] { background: var(--iso-soft); color: var(--iso); }
   .weather button[aria-pressed="true"]:not([data-plan="sun"]) { background: var(--rain-soft); color: var(--rain); }
   .plan-note { font-size: 14px; color: var(--muted); margin: 0 0 14px; }
+  .weather.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .weather button[aria-pressed="true"][data-plan2] { background: var(--hinoki-soft); color: var(--hinoki); }
+  .plan2[hidden] { display: none; }
   .depart {
     background: var(--surface); border: 1px solid var(--hair); border-radius: 14px;
     padding: 12px 14px; margin-bottom: 14px;
@@ -517,8 +520,17 @@
   <section class="panel" id="p-2" role="tabpanel" aria-labelledby="tab-2" data-day="2" hidden>
     <div class="day-head">
       <h2>2日目　お伊勢参り</h2>
-      <p>雨でも同じ予定です。山の上から伊勢湾を眺めてから、おかげ横丁と内宮へ。内宮周辺の駐車場は昼ごろ混むので、早めに停めましょう。</p>
+      <p>案1か案2を選んでください。どちらも雨でも同じ予定です。内宮周辺の駐車場は昼ごろ混むので、早めに停めましょう。</p>
     </div>
+
+    <div class="weather two" role="group" aria-label="2日目のプラン">
+      <button data-plan2="a" aria-pressed="true">案1<small>夫婦岩・スカイライン</small></button>
+      <button data-plan2="b" aria-pressed="false">案2<small>アジ釣り・夫婦岩</small></button>
+    </div>
+
+    <!-- 案1 -->
+    <div class="plan2" data-plan2="a">
+    <p class="plan-note">夫婦岩のあと、山の上から伊勢湾を眺めてから、おかげ横丁と内宮へ。</p>
     <ol class="timeline">
       <li class="stop light"><span class="time">8:00</span><div class="body">
         <h3>ホテルで朝食</h3>
@@ -557,6 +569,56 @@
         <h3>解散</h3>
         <p class="note">伊勢西ICからそれぞれ帰路へ。気をつけて</p>
       </div></li>
+    </ol>
+    </div>
+
+    <!-- 案2 -->
+    <div class="plan2" data-plan2="b" hidden>
+    <p class="plan-note">朝いちばんに浜島でアジ釣り。自分で釣ったアジをその場でアジフライに。ホテルを1時間早く出ます。</p>
+    <ol class="timeline">
+      <li class="stop light"><span class="time">8:00</span><div class="body">
+        <h3>ホテルで朝食</h3>
+        <p class="note">7:00〜9:00のバイキング（時間指定なし）。今日は早めに</p>
+      </div></li>
+      <li class="move"><span>&nbsp;</span></li>
+      <li class="stop"><span class="time">9:00</span><div class="body">
+        <h3>チェックアウト・出発</h3>
+      </div></li>
+      <li class="move"><span>車で約40分</span></li>
+      <li class="stop highlight"><span class="time">9:40</span><div class="body">
+        <h3>海ほおずきでアジ釣り・アジフライ</h3>
+        <p class="note">釣りは20分（2匹釣れたら終了）。釣ったアジはその場でアジフライに。持ち帰りは不可。土日は要予約（じゃらんは1予約4人まで）。体験料1,300円＋磯体験料1,000円／人</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E3%81%BB%E3%81%8A%E3%81%9A%E3%81%8D%20%E6%B5%9C%E5%B3%B6"><svg><use href="#i-map"/></svg>地図</a>
+          <a class="tel" href="tel:0599531002"><svg><use href="#i-tel"/></svg>電話</a>
+          <a class="web" href="https://www.jalan.net/kankou/spt_24215cb3542014103/activity/l00001D4CC/">予約ページ</a>
+        </div>
+      </div></li>
+      <li class="move"><span>車で約1時間</span></li>
+      <li class="stop highlight"><span class="time">11:40</span><div class="body">
+        <h3>夫婦岩（二見興玉神社）</h3>
+        <p class="note">夫婦円満の名所。家族の記念写真を。30分ほど</p>
+        <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E8%A6%8B%E8%88%88%E7%8E%89%E7%A5%9E%E7%A4%BE"><svg><use href="#i-map"/></svg>地図</a><a class="web" href="https://www.kankomie.or.jp/spot/2953">詳しく</a></div>
+      </div></li>
+      <li class="move"><span>車で約15〜20分</span></li>
+      <li class="stop highlight"><span class="time">12:30</span><div class="body">
+        <h3>おかげ横丁で昼食</h3>
+        <p class="note">伊勢うどん、てこね寿司、赤福など。お土産は参拝のあとに</p>
+        <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%81%8B%E3%81%92%E6%A8%AA%E4%B8%81"><svg><use href="#i-map"/></svg>地図</a><a class="web" href="https://rurubu.jp/andmore/spot/80024694">詳しく</a></div>
+      </div></li>
+      <li class="move"><span>徒歩すぐ</span></li>
+      <li class="stop highlight"><span class="time">13:30</span><div class="body">
+        <h3>伊勢神宮 内宮参拝・お土産</h3>
+        <p class="note">参拝は1時間ほど。帰りにおはらい町でお土産を</p>
+        <div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E5%8B%A2%E7%A5%9E%E5%AE%AE%20%E5%86%85%E5%AE%AE"><svg><use href="#i-map"/></svg>地図</a><a class="web" href="https://rurubu.jp/andmore/spot/80024643">詳しく</a></div>
+      </div></li>
+      <li class="move"><span>&nbsp;</span></li>
+      <li class="stop"><span class="time">15:00</span><div class="body">
+        <h3>解散</h3>
+        <p class="note">伊勢西ICからそれぞれ帰路へ。気をつけて</p>
+      </div></li>
+    </ol>
+    </div>
   </section>
 
   <!-- ===== 観光地候補 ===== -->
@@ -696,14 +758,25 @@
   });
 
   // 1日目の天気プラン
-  var planBtns = document.querySelectorAll('.weather button');
+  var planBtns = document.querySelectorAll('#p-1 .weather button');
   function showPlan(id) {
     planBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.plan === id ? 'true' : 'false'); });
-    document.querySelectorAll('.plan').forEach(function (p) { p.hidden = p.dataset.plan !== id; });
+    document.querySelectorAll('#p-1 .plan').forEach(function (p) { p.hidden = p.dataset.plan !== id; });
     store.set('plan', id);
   }
   planBtns.forEach(function (b) {
     b.addEventListener('click', function () { showPlan(b.dataset.plan); });
+  });
+
+  // 2日目の案
+  var plan2Btns = document.querySelectorAll('#p-2 .weather button');
+  function showPlan2(id) {
+    plan2Btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.plan2 === id ? 'true' : 'false'); });
+    document.querySelectorAll('#p-2 .plan2').forEach(function (p) { p.hidden = p.dataset.plan2 !== id; });
+    store.set('plan2', id);
+  }
+  plan2Btns.forEach(function (b) {
+    b.addEventListener('click', function () { showPlan2(b.dataset.plan2); });
   });
 
   // 準備チェック
@@ -732,7 +805,7 @@
     var day = now.date === DAY1 ? '1' : now.date === DAY2 ? '2' : null;
     if (!day) return;
     var scope = document.getElementById('p-' + day);
-    if (day === '1') scope = scope.querySelector('.plan:not([hidden])');
+    scope = scope.querySelector(day === '1' ? '.plan:not([hidden])' : '.plan2:not([hidden])') || scope;
     var stops = scope.querySelectorAll('.stop');
     for (var i = 0; i < stops.length; i++) {
       var t = stops[i].querySelector('.time').textContent.split(':');
@@ -740,6 +813,7 @@
     }
   }
   planBtns.forEach(function (b) { b.addEventListener('click', markNext); });
+  plan2Btns.forEach(function (b) { b.addEventListener('click', markNext); });
 
   // タップしたボタンに波紋を出す
   document.addEventListener('touchstart', function () {}, { passive: true });
@@ -755,7 +829,9 @@
   else if (now.date === DAY2) showTab('2', false);
   else if (savedTab && document.querySelector('.tab[data-tab="' + savedTab + '"]')) showTab(savedTab, false);
   var savedPlan = store.get('plan');
-  if (savedPlan && document.querySelector('.weather [data-plan="' + savedPlan + '"]')) showPlan(savedPlan);
+  if (savedPlan && document.querySelector('#p-1 .weather [data-plan="' + savedPlan + '"]')) showPlan(savedPlan);
+  var savedPlan2 = store.get('plan2');
+  if (savedPlan2 && document.querySelector('#p-2 .weather [data-plan2="' + savedPlan2 + '"]')) showPlan2(savedPlan2);
   markNext();
 })();
 </script>
